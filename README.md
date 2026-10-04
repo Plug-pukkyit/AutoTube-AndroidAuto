@@ -6,9 +6,6 @@ Android Auto ไม่มี template วิดีโอ แต่แอปป�
 ที่มี WebView เล่น YouTube บนจอเสมือน การแตะ/ลากบนจอรถถูกแปลงเป็น touch ของ WebView
 เสียงออกผ่านโทรศัพท์ → Android Auto → ลำโพงรถ ตามปกติ
 
-ต่างจาก APK เดิม (`com.example.carautotube`) ที่ประกาศเป็น MediaBrowserService
-จึงขึ้น "No items" และเปิด Activity บนจอแท็บเล็ต
-
 ## Build
 1. ติดตั้ง Android Studio (Koala/ใหม่กว่า) แล้ว Open โฟลเดอร์ `AutoTube`
 2. รอ Gradle sync (ถ้าถามให้สร้าง wrapper ให้ตอบ OK)
