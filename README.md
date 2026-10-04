@@ -34,3 +34,29 @@ Android Auto ไม่มี template วิดีโอ แต่แอปป�
   ยังไม่ได้ทดสอบกับรถรุ่นอื่นครับ
 - ใช้ผ่านเว็บ YouTube ปกติ ไม่ดึงสตรีม ไม่บล็อกโฆษณา (ตามข้อกำหนดของ YouTube)
 - `ALLOW_ALL_HOSTS_VALIDATOR` ใช้สำหรับ sideload เท่านั้น
+
+### ทางเลือกที่แนะนำ: การติดตั้งผ่าน KingInstaller (แก้ปัญหาแอปไม่ขึ้นจอรถ)
+
+ในระบบปฏิบัติการ Android 11 ขึ้นไป (รวมถึง Alldocube iPlay 20S) การติดตั้งไฟล์ `.apk` โดยตรงบางครั้งอาจถูกระบบรักษาความปลอดภัยของ Android Auto ซ่อนไอคอนไม่ให้ขึ้นหน้าจอรถ การติดตั้งผ่าน **KingInstaller** จะช่วยปลอมแปลง Package Installer ให้เป็น `com.android.vending` (Google Play Store) ทำให้แอปเปิดบนจอรถได้แน่นอน 100%
+
+#### 1. ดาวน์โหลดเครื่องมือที่จำเป็น
+1. ดาวน์โหลดไฟล์ `KingInstaller.apk` จาก GitHub ทางการ: [KingInstaller Releases](https://github.com/fcaronte/KingInstaller/releases)
+2. ดาวน์โหลดไฟล์ `app-release.apk` ของ **AutoTube** จากเมนู [Releases](../../releases) ของโปรเจกต์นี้มาเก็บไว้ในความจุเครื่องแท็บเล็ต/มือถือ
+
+#### 2. ตั้งค่าเตรียมพร้อมก่อนติดตั้ง
+1. ติดตั้งและเปิดแอป **KingInstaller** บนแท็บเล็ต/มือถือ
+2. หากระบบถามสิทธิ์ **"Install unknown apps" (ติดตั้งแอปที่ไม่รู้จัก)** ให้กดยินยอม (Allow) ให้กับ KingInstaller
+3. เปิดแอป **Android Auto** บนแท็บเล็ต/มือถือ:
+   * ไปที่ **Settings** > แตะที่ **Version** รัวๆ 10 ครั้งเพื่อเปิด Developer Settings
+   * แตะจุด 3 จุดมุมขวาบน > เลือก **Developer settings**
+   * ติ๊กถูกที่ **Unknown sources** และเปลี่ยน **Application Mode** เป็น **Developer**
+
+#### 3. ขั้นตอนการติดตั้ง AutoTube ผ่าน KingInstaller
+1. เปิดแอป **KingInstaller**
+2. กดปุ่ม **"Select file"** แล้วเลือกไฟล์ `app-release.apk` ของ AutoTube ที่ดาวน์โหลดเก็บไว้
+3. การตั้งค่าใน KingInstaller (แนะนำ):
+   * ติ๊กถูกที่ช่อง **"Enable if you use Android 11"** (จำเป็นสำหรับ Android 11)
+   * ติ๊กถูกที่ช่อง **"Enable if you use KingInstaller method"**
+4. กดปุ่ม **"Install as King"**
+5. หน้าต่างระบบจะเด้งขึ้นมาถามยืนยันการติดตั้ง ให้กด **"Install" (ติดตั้ง)**
+6. เมื่อติดตั้งเสร็จสิ้น ให้เปิดแอป AutoTube บนเครื่อง 1 ครั้งเพื่อตั้งค่าและอนุญาตสิทธิ์การทำงาน
